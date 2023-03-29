@@ -1,3 +1,3 @@
 setTimeout(() => {
     window.location.assign("/frontpage")
-}, 3000);
+}, 2000);
