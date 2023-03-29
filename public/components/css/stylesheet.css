@@ -1,0 +1,52 @@
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #f1f1f1;
+  }
+  
+  /* Style headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  /*Setting up the sizes of my headings*/
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 2em;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+  }
+  
+  /* Styling my paragraphs */
+  p {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  
+  /* Styling my code snippets */
+  code {
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    background-color: #dddddd;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+  pre {
+    font-family: Consolas, monospace;
+    font-size: 0.9em;
+    background-color: #dddddd;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: pre-wrap;
+  }
+  

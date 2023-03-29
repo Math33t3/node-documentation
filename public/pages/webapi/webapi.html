@@ -1,0 +1,62 @@
+<div>
+
+    <h4>RESTful Web APIs in General</h4>
+    <p>A RESTful API uses HTTP requests to perform operations on resources identified by URIs (Uniform Resource
+        Identifiers). It relies on a stateless, client-server architecture, where the server provides resources, and the
+        client makes requests to those resources.</p>
+    <p>The main principles of RESTful API design are:</p>
+    <ol>
+        <li>Resources should be identified by a unique URI, and requests to the resource should be sent to that URI.
+        </li>
+        <li>Requests should be stateless, meaning that each request should contain all the information necessary for the
+            server to understand and process the request.</li>
+        <li>The server should provide a consistent interface for accessing and modifying resources, using HTTP verbs
+            such as GET, POST, PUT, and DELETE.</li>
+        <li>Responses from the server should be in a standardized format, such as JSON or XML.</li>
+        <li>The API should be discoverable, meaning that clients should be able to explore and navigate the available
+            resources.</li>
+    </ol>
+
+</div>
+
+<div>
+    <h4>The client/server model</h4>
+    <p>This model is a common model for communication between two software applications, typically over a network such
+        as the Internet. In this model, one application (the client) sends a request for information or action to
+        another application (the server), and the server responds to the request with the requested information or
+        action.</p>
+    <p>The client/server request/response model is based on a simple sequence of events:</p>
+    <ol>
+        <li>The client sends a request to the server, which typically includes information about the action or
+            information the client is requesting.</li>
+        <li>The server receives the request and processes it, often by retrieving data or performing some action based
+            on the request.</li>
+        <li>The server sends a response back to the client, which typically includes the requested information or
+            confirmation of the action performed.</li>
+        <li>The client receives the response and can then use the information or take further action based on the
+            response.</li>
+    </ol>
+    <p>This model is widely used in many different types of applications, including web applications, mobile
+        applications, and many other types of client/server systems.</p>
+</div>
+
+<h4>Designing your API</h4>
+<p>When designing an API, there are some conventions to make it easier to create and to troubleshoot, manage and
+    maintain in the future, some of these are as follows:</p>
+<ul>
+    <li>Clear and descriptive names that accurately reflect the functionality of the API endpoint or resource.</li>
+    <li>Use lowercase letters with hyphens to separate words in URL paths. For example, /users/new-user.</li>
+    <li>Use nouns for resources and verbs for actions, and remember to use plural nouns for collections and singular
+        nouns for individual resources. For example, use /users to represent a collection of users and /users/1 to
+        represent a single user.</li>
+    <li>HTTP methods should indicate the type of action being performed. For example, use GET to retrieve data, POST to
+        create new data, PUT or PATCH to update existing data, and DELETE to delete data.</li>
+    <li>Consistent naming conventions throughout the API. For example, if you use snake_case for resource names, use it
+        consistently for all resources. Avoid using abbreviations or acronyms unless they are well-known and commonly
+        used in the industry.</li>
+    <li>Remember to sort the endpoints in your application, the priority should be, Get, Post, Put, Patch and delete at
+        last. This helps the developer to navigate the application during the entire lifespan of the project.</li>
+</ul>
+<p>Generally, this sums up how to order route methods and the naming conventions of the endpoints.</p>
+<img src="./components/images/apidesign.png" alt="api design" style: width="60%">
+

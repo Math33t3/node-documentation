@@ -1,0 +1,97 @@
+
+
+/* Default styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+p {
+  margin: 1em 0;
+}
+
+code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+  color: #333;
+}
+
+pre {
+  background-color: #f7f7f7;
+  padding: 1em;
+  overflow-x: auto;
+}
+
+/* Styling links */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Code blocks */
+.code-block {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 1em;
+  background-color: #f7f7f7;
+  overflow-x: auto;
+}
+
+/* Terminal snippets */
+.terminal {
+  background-color: #000;
+  color: #fff;
+  padding: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
+}
+
+#frontpage {
+  background-image: url('/components/images/logonodejs.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+  width: 10em;
+}
+
+#nodejs {
+  background-image: url('/components/images/logonodejs.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+  width: 10em;
+}
+
+#tools {
+  background-image: url('/components/images/tools.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+  width: 10em;
+}
+
+#js {
+  background-image: url('/components/images/js.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+  width: 10em;
+}
+
+#webapi {
+  background-image: url('/components/images/webapi.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+  width: 10em;
+}

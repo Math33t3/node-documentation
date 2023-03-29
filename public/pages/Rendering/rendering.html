@@ -1,0 +1,44 @@
+<div id="rendering ">
+    <h4>Rendering HTML in the browser</h4>
+    <p>When an HTML page is rendered in a browser these steps happen to create the page in front of your screen:</p>
+    <ol>
+        <li>The browser requests the HTML from the server. When it gets it,</li>
+        <li>parses the HTML and creates a Document Object Model (DOM) tree, which represents the structure of the page.
+            It starts at the top of the HTML page and as it reads the links to other static files, it sends a request to
+            get those files from the server as well.</li>
+        <li>The browser receives the CSS, JavaScript and other static files from the server.</li>
+        <li>The browser uses the CSS files to apply styles to the elements in the DOM tree, creating a Render Tree.</li>
+        <li>The browser combines the DOM tree and the Render Tree to create the Layout Tree, which determines the exact
+            position and size of each element on the page.</li>
+        <li>The browser then renders the page by painting each element on the screen in the correct position and with
+            the correct styles.</li>
+        <li>Any JavaScript code included in the page is executed after the page has been rendered. This code can
+            manipulate the DOM tree and update the page dynamically, without requiring a full page refresh.</li>
+    </ol>
+    <p>It's important to note that this process can take some time, particularly if the page includes a lot of
+        JavaScript code or complex CSS styles. This is why client-side rendering can sometimes result in a slow initial
+        loading time, particularly on slower internet connections or older devices.</p>
+    <p>In contrast, server-side rendering (SSR) involves generating the HTML on the server and sending it to the client
+        as a fully-rendered page, which can improve initial loading time and help with search engine optimization.</p>
+
+
+</div>
+
+<div id="serverside-rendering">
+    <h4>Serverside rendering</h4>
+    <p>Server-side rendering (SSR) is a technique used in web development where a web page is generated on the server
+        and then sent to the client to be displayed in the user's browser. SSR is an alternative to client-side
+        rendering (CSR), where the web page is generated in the browser using JavaScript after the page is loaded.</p>
+    <p>One of the main benefits of SSR is that it can improve the initial loading speed of a web page. With SSR, the
+        server can send the fully rendered HTML to the client, which means the user can see the content right away
+        without having to wait for JavaScript to download and execute. This can be especially important for users on
+        slow or unreliable internet connections.</p>
+    <p>Another benefit of SSR is that it can improve search engine optimization (SEO). Search engines like Google can
+        more easily crawl and index the content of a server-rendered web page, which can improve its visibility in
+        search results.</p>
+    <p>However, SSR can also have some drawbacks. For example, it can be more difficult to implement and maintain
+        compared to CSR, and it may not work as well for complex, dynamic web applications.</p>
+    <p>Overall, the decision to use SSR or CSR will depend on the specific needs and goals of a web application. In some
+        cases, a hybrid approach that combines both techniques may be the best solution.</p>
+
+</div>

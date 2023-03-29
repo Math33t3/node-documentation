@@ -1,0 +1,105 @@
+<div id="npm">
+    <h4>NPM</h4>
+    <p>NPM stands for Node Package Manager. It is a software package manager for the JavaScript programming language,
+        primarily used for managing packages and dependencies for Node.js projects.</p>
+    <p>NPM is used to install and manage packages, which are pre-written code modules that can be easily integrated into
+        a project to provide additional functionality or simplify the development process. These packages can be
+        installed globally or locally, depending on the project's needs.</p>
+    <p>NPM also allows developers to create and publish their own packages, which can be shared with the wider
+        community. This encourages collaboration and the sharing of ideas and code, which can help to speed up the
+        development process and improve the quality of software.</p>
+    <p>To use NPM, developers need to have Node.js installed on their computer. NPM comes bundled with Node.js, so it is
+        automatically installed when Node.js is installed. Developers can then use the command line interface to run NPM
+        commands, such as installing and managing packages, publishing packages, and updating dependencies.</p>
+</div>
+
+<div id="express">
+    <h4>Express</h4>
+    <p>Express.js is a popular framework for building web applications in Node.js.
+        It provides a simple and flexible way to handle HTTP requests and responses, and can be used for both
+        server-side and client-side rendering.
+        With Express.js, developers can build custom middleware to handle server-side rendering to render HTML templates
+        on the server.</p>
+</div>
+<div id="nodemon">
+    <h4>Nodemon.</h4>
+    <p>Nodemon is a handy tool that is used during Node.js development to automatically restart the Node.js application
+        when any changes are made to the source code. It monitors the files in the directory and any subdirectories of
+        the directory where nodemon is run, and it automatically restarts the Node.js application when it detects any
+        changes.</p>
+    <p>Nodemon is useful because it saves developers time by eliminating the need to manually stop and restart the
+        Node.js application every time a change is made. This allows developers to focus on writing code rather than
+        worrying about restarting the application after every change.</p>
+    <p>Nodemon is installed using npm (Node Package Manager), and it is used from the command line by running the
+        nodemon command followed by the name of the Node.js application file.
+        For example, if the Node.js application file is named app.js, the command to start the application with nodemon
+        would be:</p>
+    <code>nodemon app.js</code>
+</div>
+
+<div id="vercel">
+    <h4>Vercel</h4>
+    <p>Vercel is a cloud platform that provides hosting and deployment services for web applications, including static
+        sites, single-page applications, and serverless functions. It was founded in 2015 by Guillermo Rauch, who is
+        also the creator of the Next.js framework for building server-side-rendered React applications.</p>
+    <p>Vercel's platform is designed to provide fast and reliable deployment of web applications by leveraging modern
+        web technologies such as serverless computing and edge caching. It supports a variety of popular frameworks and
+        languages, including React, Vue.js, Angular, and Node.js.</p>
+    <p>One of the key features of Vercel is its integration with Git workflows. Users can deploy their applications
+        directly from a Git repository, making it easy to keep their development and deployment processes streamlined
+        and efficient. Vercel also provides features such as automatic HTTPS, custom domains, and advanced caching
+        options to help ensure the security and performance of web applications.</p>
+    <p>In addition to its hosting and deployment services, Vercel also provides a number of tools and resources for
+        developers, including a command-line interface (CLI), a web-based dashboard for managing deployments, and
+        extensive documentation and tutorials. Vercel's platform is used by a wide range of organizations, from small
+        startups to large enterprises, to deploy and scale their web applications.</p>
+
+</div>
+<div id="git">
+    <h4>Git</h4>
+    <p>Git is a version control system used for tracking changes in source code during software development. It was
+        created by Linus Torvalds in 2005 to manage the development of the Linux kernel.</p>
+    <p>Git allows developers to collaborate on a project and keep track of changes to the codebase over time. It enables
+        developers to work on different branches of the codebase simultaneously, merge changes from different branches,
+        and revert to previous versions of the code if necessary.</p>
+    <p>Git uses a distributed architecture, meaning that each developer has a local copy of the code repository, and
+        changes can be synchronized with a central repository hosted on a server. This allows developers to work on the
+        codebase offline and then sync their changes with the central repository later.</p>
+    <p>Git has become one of the most popular version control systems in use today, and it is widely used in both
+        open-source and commercial software development. It has also become an important tool for collaboration and code
+        sharing in the software development community, with many popular code hosting platforms like GitHub and GitLab
+        providing support for Git.</p>
+    <p>Some useful Git commands:</p>
+    <ul>
+        <li><code>git add .</code>: This command adds all changes in the working directory to the Git staging area. It
+            does not include changes to deleted files or newly created files.</li>
+        <li><code>git add filename</code>: This command adds changes made to a specific file to the Git staging area.
+        </li>
+        <li><code>git commit -m "commit message here"</code>: This command creates a new commit in the Git repository
+            with the changes that have been added to the staging area. The commit message is used to describe the
+            changes made in the commit. It is recommended to provide a descriptive commit message to help others
+            understand the purpose of the changes.</li>
+        <li><code>git push</code>: This command uploads the local Git repository changes to a remote repository,
+            typically hosted on a Git server such as GitHub or GitLab. This command is used to share changes with others
+            and keep the remote repository in sync with the local repository. If more working with branches and the like
+            the user will need to specify the name of
+            the remote repository and branch they want to push to, for example: <code>git push origin master</code>.
+        </li>
+    </ul>
+    <h4> The gitignore file</h4>
+    <p>A <code>.gitignore</code> file is a text file that tells Git which files or directories to ignore when tracking
+        changes in a repository. It is a simple way to prevent certain files or directories from being committed to the
+        repository, as well as preventing them from cluttering your local working directory.</p>
+    <p>For example, you may want to ignore temporary files, log files, build output, or files containing sensitive
+        information like passwords or API keys. By adding these file or directory names to the <code>.gitignore</code>
+        file, Git will ignore them and they won't be included in any commits or shown as unstaged changes in your
+        working directory.</p>
+    <p><code>.gitignore</code> files can be added to your repository's root directory or any subdirectory. Git will
+        automatically read and apply the rules in the <code>.gitignore</code> file for the directory it is located in
+        and its subdirectories. You can also have multiple <code>.gitignore</code> files in different directories if
+        needed.</p>
+    <p>It's important to note that <code>.gitignore</code> files only affect untracked files. If a file has already been
+        committed to the repository, it will continue to be tracked by Git even if it is added to the
+        <code>.gitignore</code> file later. In this case, you would need to manually remove the file from the repository
+        using <code>git rm --cached</code> to stop tracking it.</p>
+</div>

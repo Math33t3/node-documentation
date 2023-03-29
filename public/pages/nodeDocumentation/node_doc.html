@@ -1,0 +1,65 @@
+<h3>Node</h3>
+<div>
+    <h4>What is Node.js?</h4>
+    <div>
+        <p>Node.js is a JavaScript runtime built on the V8 JavaScript engine, which is used to execute JavaScript code on the server-side. It allows developers to use JavaScript not just for client-side scripting but also for server-side programming, making it a popular choice for building scalable and high-performance web applications.</p>
+        <p>Node.js is event-driven and uses an asynchronous, non-blocking I/O model, which makes it lightweight and efficient. It also has a large ecosystem of open-source modules and packages available through its package manager, npm, which can be easily integrated into applications. Node.js is widely used for building web servers, real-time applications, and command-line tools.</p>
+        <h4>Express</h4>
+        <p>Express is an open-source web framework for Node.js. It provides a simple and flexible way to create web applications and APIs by providing a set of HTTP utility methods and middleware to handle requests and responses. It provides a robust set of features for routing, handling requests and responses, and managing sessions and cookies.</p>
+        <p>Some of the key features of Express include:</p>
+        <ul>
+          <li>Routing: Express provides a simple and flexible way to define routes for handling incoming HTTP requests.</li>
+          <li>Middleware: Express allows developers to use middleware functions to modify incoming requests or outgoing responses. This makes it easy to add functionality such as authentication, logging, or compression to your application.</li>
+          <li>Templating engines: Express supports various templating engines like EJS, Pug, and Handlebars, making it easy to generate HTML pages dynamically.</li>
+          <li>Error handling: Express provides a built-in error-handling middleware that allows developers to handle errors and exceptions in a structured way.</li>
+        </ul>
+      </div>
+
+      <div>
+        <p>Create a new directory for your project.</p>
+        <p>In this directory create a package.json file, this file should contain your projects metadata and dependencies.</p>
+        <p>This can be created using the terminal command:</p>
+        <pre><code>npm init</code></pre>
+        <p>which will prompt you to answer a few questions and then the package.json will be generated. but in this example we will keep it to the express dependency in the file.</p>
+        <p>After this we install express by running the command:</p>
+        <pre><code>npm i express</code></pre>
+        <p>After this command has finished executing you can see the directory called node_modules, this contains all the dependencies, third party modules and packages needed to run the application. The content of the folder is dictated by the package.json.</p>
+        <p>Next we create a new file called app.js, this file will be our entry point to the application and will contain our main application and routing of our server.</p>
+        <p>At first we need to import our express module and create a new express object, this is done like so:</p>
+        <pre><code>const express = require('express');
+      const app = express();</code></pre>
+        <p>Then we need a basic route, we can start by routing something to the root URL “/” of our app.</p>
+        <p>At first it could be a simple greeting from the server:</p>
+        <pre><code>app.get('/', (req, res) =&gt; {
+        res.send('Hello World!');
+      });</code></pre>
+        <p>Or we could send a html page, called index.html in this example, like so:</p>
+        <pre><code>app.get('/', (req, res) =&gt; {
+        res.sendFile(__dirname + '/index.html');
+      });</code></pre>
+        <p>Now we just need to start the server and dictate what port it should use:</p>
+        <pre><code>app.listen(3000, () =&gt; {
+        console.log('Server listening on port 3000!');
+      });</code></pre>
+        <p>Now we can run the app, using the command:</p>
+        <pre><code>node app.js</code></pre>
+        <p>And go to our browser and see our little greeting from the server.</p>
+
+        <img src="./components/images/HelloWorld.png" alt="hello world">
+      </div>
+</div>
+
+<div>
+    <p>Serving files</p>
+<p>Creating a more complex server requires more files to be sent to the client, this is because in the previous example we only send the HTML file, which means that no css files or javascript files are available to the client.</p>
+<p>To deal with this we can make use of the  <code>express.static</code> function in Node.js which is a built-in middleware function in the express module. It is used to serve static files, such as HTML, CSS, JavaScript, images, and other assets, in an Express application.</p>
+<p>The <code>express.static</code> middleware function takes one argument, which is the directory path that contains the static files to be served. Here's an example of how to use <code>express.static</code> to serve static files in an Express application:</p>
+<pre><code>app.use(express.static("public"));
+</code></pre>
+<p>In this example, <code>express.static</code> is used to serve static files from the public directory. When a request is made for a static file, such as http://localhost:3000/stylesheet.css, Express will look for the file in the public directory and serve it to the client if it exists.</p>
+<p>The <code>express.static</code> method in Node.js provides a convenient way to serve static files in an Express application. However, there are security considerations to keep in mind when using this middleware.</p>
+<p>One security issue is the possibility of serving sensitive files, such as configuration files or database credentials, that should not be accessible to the public. To prevent this, it's important to make sure that the directory path passed to <code>express.static</code> only contains the files that are intended to be publicly accessible. If you have sensitive files that need to be accessed by your application code but not by the public, you should store them outside of the directory that <code>express.static</code> is serving.</p>
+<p>Another security issue is the possibility of serving malicious files that could exploit vulnerabilities in client-side software. For example, an attacker could serve a malicious JavaScript file that could steal sensitive information from the user's browser. To mitigate this risk, it's important to keep your static files up-to-date with the latest security patches, and to use a Content Security Policy (CSP) to restrict which external resources your application can load.</p>
+<p>Additionally, it's important to properly configure caching headers for your static files to ensure that they are not cached indefinitely in the client's browser, which could prevent updates from being received. You should also consider using HTTPS to encrypt the communication between the server and the client, which can prevent eavesdropping and man-in-the-middle attacks.</p>
+<p>Overall, while <code>express.static</code> is a useful middleware for serving static files in an Express application, it's important to carefully consider the security implications and take steps to mitigate any potential risks.</p>
+</div>

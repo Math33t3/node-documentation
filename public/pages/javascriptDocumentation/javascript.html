@@ -1,0 +1,670 @@
+<h3>Javascript</h3>
+
+<div id="js-general">
+    <h4>What is javascript?</h4>
+    <p>
+        JavaScript is a high-level programming language used primarily to create interactive web pages and web
+        applications. <br>
+        It is a versatile language that can be used both on the client-side (in the browser) and server-side (with
+        Node.js). <br>
+        By now javascript has become an essential skill for many developers as it is used widely in web development
+    </p>
+</div>
+
+<div id="js-datatypes">
+    <h4>Javascript datatypes</h4>
+    <p>
+        There are several data types that are used to represent different kinds of values.
+        It's worth noting that JavaScript is a dynamically typed language,
+        which means that the data type of a variable is determined at runtime based on the value it holds.
+    </p>
+    <p>
+        The following are the different data types in JavaScript
+    </p>
+    <p>
+        Primitive data types:
+        <code>Primitive data types</code> are the basic data types in JavaScript there are six primitive data types in JavaScript:
+    </p>
+    <p>
+        <code>number</code>: Represents numeric values, including integers and floating-point numbers.
+    </p>
+    <p>
+        <code>string</code>: Represents textual data, constructed as an array of characters.
+    </p>
+
+    <p>
+        <code>boolean</code>: Represents a logical value, true or false.
+    </p>
+    <p>
+        <code>null</code>: Represents a deliberate non-value, assigned by setting a variable to null.
+    </p>
+    <p>
+        <code>undefined</code>: Represents an uninitialized value or the absence of a value.
+    </p>
+    <p>
+        <code>symbol</code>: Represents a unique identifier, used mainly as an object property key.
+    </p>
+
+    <p>
+        On top of the primtive datatypes javascript uses oObjects to store and represent complex data structures and
+        entities,
+        these objects are mutable, meaning their values can be changed while working with them. types of objects include
+    </p>
+    <p>
+        Object: A collection of key-value pairs, known as properties.
+    </p>
+    <p>
+        Array: An ordered collection of values, stored in numeric indices starting from zero.
+    </p>
+    <p>
+        Function: A block of code that can be called by other parts of the program.
+    </p>
+    <p>
+        Date: Represents a date and time value.
+    </p>
+    <p>
+        RegExp: Represents a regular expression that is used for pattern matching in strings.
+    </p>
+    <p>
+        Map and Set: Two data structures used for mapping keys to values and storing unique values, respectively.
+    </p>
+</div>
+
+<div id="type-coercion">
+    <h4>Type Coercion</h4>
+    <p>
+        Type coercion is the conversion of values between different data types in certain situations.
+        This can happen when an operator or function expects a value of a certain type, but is instead given a value of
+        a different type.
+    </p>
+    <p>
+        JavaScript uses two types of type coercion:
+    </p>
+    <p>
+        Implicit Type Coercion:
+    </p>
+    <p>
+        Implicit type coercion occurs when JavaScript automatically converts a value from one type to another,
+        without any explicit indication from the programmer.
+
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        const num = 10; 
+        const str = "20";
+
+        console.log(num + str); // Output: "1020"
+    </pre>
+    <p>
+        In this example, the + operator is used to concatenate num (which is a number) and str (which is a string).
+        JavaScript implicitly converts the number num to a string and concatenates the two strings together,
+        resulting in the string "1020".
+    </p>
+    <p>
+        Explicit Type Coercion:
+    </p>
+    <p>
+        Explicit type coercion occurs when the programmer explicitly converts a value from one type to another,
+        using built-in conversion functions.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        const str = "10";
+        const num = Number(str);
+
+        console.log(typeof str); // Output: "string"
+        console.log(typeof num); // Output: "number
+    </pre>
+    <p>
+        In this example, the Number() function is used to convert the string str to a number.
+        The resulting num variable has a type of "number",
+        whereas the original str variable has a type of "string".
+    </p>
+    <p>
+        Type coercion can lead to unexpected results, so it's important to be aware of it and to use it carefully.
+        It's generally a good practice to explicitly convert values to the desired type,
+        rather than relying on implicit type coercion, in order to avoid potential bugs and improve code readability.
+    </p>
+</div>
+<div id="comparing-values">
+    <p>
+        There are two ways to compare values in javascript.
+        There`s the strict equality operator (`===`)and the abstract equality operator (`==`).
+    </p>
+    <p>
+        The strict equality operator compares the values of two operands without performing any type coercion,
+        it returns `true` if the operands are equal in both value and data type.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        console.log(5 === 5); // Output: true
+        console.log(5 === "5"); // Output: false
+    </pre>
+    <p>
+        On the other hand, the abstract equality operator compares the values after performing type coercion if
+        necessary,
+        and returns true if the operands are equal in value.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        console.log(5 == 5); // Output: true
+        console.log(5 == "5"); // Output: true
+    </pre>
+    <p>
+        When comparing values, it is generally recommended to use the strict equality operator (`===`) whenever
+        possible,
+        as it provides more predictable and reliable results,
+        it also computes faster as the application does not need to type coerce.
+    </p>
+
+</div>
+<div id="variables-scoping">
+    <h4>Variables and scoping in javascript</h4>
+    <p>
+        There are three types of variables:
+    </p>
+    <p>
+    <pre><code>var</code></pre>:
+    </p>
+    <p>
+        <code>var</code> is the oldest way of declaring a variable in JavaScript. It has a function-level scope,
+        meaning that it is accessible within the function in which it is declared, as well as any nested functions.
+        If a <code>var</code> declaration is made outside of any function, it becomes a global variable and is accessible throughout
+        the entire program.
+        The main drawback of <code>var</code> is that it allows variable hoisting,
+        meaning that a variable can be declared after it has been used in the code, as the code is interpreted as the
+        declaration of the <code>var</code> is at the top of the scope.
+        This behavior can sometimes lead to bugs and unexpected behavior,
+        especially when developers are not aware of how it works.
+        This is one of the reasons why it is generally recommended to always declare variables at the top of their
+        respective scope,
+        as this makes the code easier to read and often less prone to errors.
+    </p>
+    <p>
+    <pre><code>let</code></pre>:
+    </p>
+    <p>
+        <code>let</code> is a relatively new way of declaring a variable in JavaScript, introduced in ES6.
+        It has a block-level scope, meaning that it is accessible within the block in which it is declared, as well as
+        any nested blocks.
+        Unlike var, <code>let</code> does not allow variable hoisting, which can help prevent bugs in the code.
+    </p>
+    <p>
+    <pre><code>const</code></pre>:
+    </p>
+    <p>
+        <code>const</code> is another relatively new way of declaring a variable, it was also introduced in ES6.
+        It also has a block-level scope and is used to declare variables that are meant to be constant and not changed
+        during the program's execution.
+        Once a <code>const</code> variable is assigned a value, that value cannot be changed. However,
+        it's worth noting that the value of a <code>const</code> variable can still be mutated if it is an object or an array.
+    </p>
+    <p>
+        Summed up: the main differences between these three types of variables are:
+    </p>
+    <p>
+        Scope:
+        <code>var</code> has a function-level scope, while <code>let</code> and <code>const</code> have a block-level scope.
+    </p>
+    <p>
+        Hoisting:
+        <code>var</code> allows variable hoisting, while <code>let</code> and <code>const</code> do not.
+    </p>
+    <p>
+        Reassignment:
+        <code>const</code> variables cannot be reassigned, while <code>var</code> and <code>let</code> variables can.
+    </p>
+    <p>
+        Initialization:
+        <code>var</code> and <code>let</code> variables can be declared without being initialized, while <code>const</code> variables must be initialized when they are declared.
+    </p>
+
+    <p>
+        It's generally recommended to use <code>let</code> and <code>const</code> instead of <code>var</code> in modern JavaScript code,
+        as they offer better control over variable scope and can help prevent bugs,
+        generally use <code>const</code> if you can get away with it, otherwise use <code>let</code>. However,
+        in the end the choice between <code>let</code> and <code>const</code> depends on whether the variable is intended to be mutable or not.
+    </p>
+</div>
+<div id="arrays-methods">
+    <h4>Arrays and array methods</h4>
+    <p>
+        The .push() method
+    </p>
+    <p>
+        .push() allows you to add one or more elements to the end of an array.
+        It modifies the original array and returns the new length of the array.
+    </p>
+    <pre>
+        let myArray = [1, 2, 3];
+        myArray.push(4, 5);
+        console.log(myArray); // Output: [1, 2, 3, 4, 5]
+    </pre>
+    <p>
+        .push() can also be used to add an array to another array.
+    </p>
+    <pre>
+        let myArray1 = [1, 2, 3];
+        let myArray2 = [4, 5];
+        myArray1.push(...myArray2);
+        console.log(myArray1); // Output: [1, 2, 3, 4, 5]
+    </pre>
+    <p>
+        the .indexOf() method
+    </p>
+    <p>
+        .indexOf() is used to search an array for an element and return its index position.
+        If the element is not found in the array, the method returns -1.
+        The method returns the index of the first occurance of the given element in the array,
+        and does not keep iterating the array after the index is found. The method takes the element as a parameter and
+        can optionally
+        take another parameter dictating from where in the array the method should start,
+        if this second parameter is omitted, the method will start searching at the beginning of the array.
+    </p>
+    <p>
+        the .splice() method
+    </p>
+
+    <p>
+        splice() is used to modify an array by either adding, removing or replacing elements at specific locations.
+        The method takes a number of parameters, the first is the index where the method should start modifying the
+        array,
+        this can also be negative numbers to count from the end of the array, the second parameter is how many elements
+        the method should remove.
+        After these two the method can take new elements as parameters to place into the array at the previously chosen
+        index.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        array.splice(index, howmany, item1, ....., itemX)
+    </pre>
+    <p>
+        The .slice() method
+    </p>
+    <p>
+        the slice() method is used to create a new array from another array by copying over elements.
+        The method takes two parameters, the first is the index from where to start, and the second parameter is the
+        index where to stop.
+        The method then returns an array consisting of the elements on the chosen indexes of the first array.
+    </p>
+    <pre>
+        array.slice(start, end)
+    </pre>
+    <p>
+        The .pop() method
+    </p>
+    <p>
+        .pop() is used to remove the last element from an array and return that element.
+    </p>
+</div>
+
+<div id="Looping">
+    <h4>Looping in javascript</h4>
+    <p>
+        When looping in javascript there are quite a few reasons to have a functional approach and using the looping
+        methods such as
+        forEach, map, reduce, and filter,
+        as they offer several benefits over traditional for loops.
+    </p>
+    <p>
+        Here are some points:
+    </p>
+    <p>
+        1. Concise syntax:
+        The functional looping methods use a more concise syntax, which makes the code easier to read and understand.
+    </p>
+    <p>
+        2. Immutable data: Functional looping methods operate on immutable data structures,
+        which means that they do not modify the original array or object.
+        This makes the code more predictable and helps the developer to minimize side effects.
+    </p>
+    <p>
+        3. Function composition: Functional looping methods can be easily composed with other functions,
+        which enables developers to create more complex functionality by combining simple functions.
+    </p>
+    <p>
+        4. Built-in error handling: The functional looping methods provide built-in error handling,
+        such as checking for null or undefined values, which helps prevent common programming errors.
+    </p>
+    <p>
+        5. Improved performance: In some cases, functional looping methods can be more
+        performant than traditional for loops,
+        especially when working with large arrays or complex data structures.
+    </p>
+    <p>
+        The different looping methods all have strengths and weaknesses
+        and should be used in accordance with the use case at hand.
+    </p>
+    <p>
+        The .forEach() loop
+    </p>
+    <p>
+        this method executes a callback function for every element in the array.
+        It doesn`t require any manual iteration control, as it stops executing the callback when there are no more
+        elements in the array.
+        The forEach loop is generally used when manipulating the DOM tree, as the method itself only executes the
+        callback a number of times,
+        which in turn means that when manipulating data there are generally more concise methods depending on the use
+        case.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        array.forEach(function(element) {
+            console.log(element);
+        });
+    </pre>
+    <p>
+        This example writes every element to the console.
+    </p>
+
+    <p>
+        the .map() method
+    </p>
+    <p>
+        this method returns a new array with the exact same length as the original array.
+        The method executes a callback function for each element and maps the value to the new array
+    </p>
+
+    <p>
+        For example:
+    </p>
+    <pre>
+        const newArray = array.map(function(element) {
+            return element * 2;
+         });
+    </pre>
+    <p>
+        The example here creates a new array with same length,
+        but every index has double the value of the original.
+    </p>
+
+    <p>
+        the .reduce() method
+    </p>
+    <p>
+        .reduce() reduces an array to a single value by executing a callback function for each element of the array.
+        The result of the callback function on each iteration is used as the accumulator for the next iteration,
+        until the final accumulated value is returned.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        const numbers = [1, 2, 3, 4, 5];
+
+        const sum = numbers.reduce(function(accumulator, currentValue) {
+            return accumulator + currentValue;
+        }, 0);
+    </pre>
+    <p>
+        In this example, the numbers array is passed to the .reduce() method, and a callback function is provided that
+        adds the current value to the accumulator.
+        The initial value of the accumulator is set to 0. The .reduce() method returns the sum of all elements in the
+        array,
+        which is assigned to the sum variable and logged to the console.
+    </p>
+
+    <p>
+        the .filter() method:
+    </p>
+
+    <p>
+        is used to filter out an array, creating a another shorter, or same length, array only including the elements
+        which pass some chosen criteria.
+        The filter method takes a callback function as it`s argument, which is executed for each element of the array.
+        The callback function should return a Boolean value,
+        indicating whether the element should be included in the resulting array or not. If the callback function
+        returns True,
+        the element is included in the resulting array. If it returns False, the element is skipped.
+    </p>
+    <p>
+        For example:
+    </p>
+    <pre>
+        const newArray = array.filter(function(element) {
+            return element > 5;
+          });
+    </pre>
+
+    <p>
+        In this example, the array is filtered using the method, and the callback functions consists of a check if the
+        element is higher than the value 5,
+        if it is the callback returns true and the element is included in the resulting array.
+        Meaning after this .filter() method we have a new array consisting only of the elements of the old array with a
+        value higher than 5.
+    </p>
+    <p>
+        the .find() method
+    </p>
+
+    <p>
+        this method takes a callback function as an argument that is called for each element of the array,
+        and the first element for which the callback function returns a truthy value is returned by the .find() method.
+        The method does not keep iterating after the first truthy value, which makes it very performance friendly.
+    </p>
+    <p>
+        For example:
+    </p>
+
+    <pre>
+        const numbers = [1, 2, 3, 4, 5];
+
+        const evenNumber = numbers.find((number) => number % 2 === 0);
+    </pre>
+
+    <p>
+        In this example the find method returns the first even number of the array numbers, which, in this case, is 2.
+    </p>
+</div>
+
+<div id="fetching">
+    <h4>Fetching in javascript</h4>
+    <p>Fetching refers to the process of making an HTTP request to a server and retrieving data from it. The fetch()
+        function is a built-in function in modern web browsers and Node.js that allows you to make network requests and
+        handle responses in your JavaScript code.</p>
+    <p>Here's an example of how to use the fetch() function to retrieve data from a server:</p>
+    <pre><code class="language-javascript">fetch('https://api.example.com/data')
+      .then(response =&gt; response.json())
+      .then(data =&gt; console.log(data))
+      .catch(error =&gt; console.error(error));</code></pre>
+    <p>In this example, the fetch() function is used to make a GET request to the URL https://api.example.com/data. The
+        response is then converted to JSON format using the json() method, and the resulting data is logged to the
+        console. If an error occurs, it is caught and logged to the console.</p>
+    <p>The fetch() function returns a Promise that resolves to a Response object. You can use the Response object to
+        inspect the status code and headers of the response, and to read the response body using one of the methods
+        provided by the object (text(), json(), arrayBuffer(), blob(), or formData()).</p>
+    <p>You can also use the fetch() function to make POST, PUT, and DELETE requests by passing additional options to the
+        function, such as the request method, headers, and body. For example:</p>
+    <pre><code class="language-javascript">fetch('https://api.example.com/data', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ data: 'example' })
+    })
+      .then(response =&gt; response.json())
+      .then(data =&gt; console.log(data))
+      .catch(error =&gt; console.error(error));</code></pre>
+    <p>In this example, the fetch() function is used to make a POST request to the URL https://api.example.com/data. The
+        headers option is used to set the Content-Type header to application/json, and the body option is used to send
+        JSON-encoded data to the server.</p>
+</div>
+
+<div id="modules">
+    <h4>Modules</h4>
+    <p>In general, modules in JavaScript are self-contained units of code that can be reused in different parts of an
+        application. They allow you to break up your code into separate files or modules, each with its own set of
+        functions, classes, and variables.</p>
+    <p>Modules can help make your code more organized, maintainable, and scalable by providing a clear separation of
+        concerns. They also allow you to share code between different parts of an application, or between different
+        applications, without having to duplicate the code.</p>
+    <p>JavaScript has several different module systems, including the CommonJS, AMD, and UMD formats. However, the
+        ECMAScript 6 (ES6) module system is the most widely used and is built into the language itself. It uses the
+        import and export keywords to define and use modules.</p>
+    <p>With the ES6 module system, you can export functions, variables, classes, and other values from a module using
+        the export keyword, and then import those values into another module using the import keyword. This allows you
+        to reuse code across different parts of your application, or even across different applications.</p>
+    <p>Here's an example of how to define and use a module in JavaScript:</p>
+    <pre><code>
+            export function add(a, b) {
+              return a + b;
+            }
+            
+            import { add } from './math.js';
+            console.log(add(2, 3)); // Output: 5</code></pre>
+
+    <p>In this example, the export keyword is used to export a function named add from the math.js module. The import
+        keyword is then used to import the add function into the app.js module, which is then used to calculate the sum
+        of 2 and 3 and log the result to the console.</p>
+    <p>Overall, modules in JavaScript are an important part of modern web development, and can help you write cleaner,
+        more maintainable, and more reusable code.</p>
+</div>
+
+<div id="import">
+    <h4>Importing </h4>
+    <p>In JavaScript, <code>import</code> is a keyword used to import a module or a named export from another module.
+        It's a feature of the ECMAScript 6 (ES6) module system, which is supported by most modern web browsers and
+        Node.js.</p>
+    <p>Here's an example of how to use <code>import</code> to import a default export from another module:</p>
+    <pre><code class="language-javascript">import myModule from './myModule.js'; 
+        </code></pre>
+    <p>In this example, the <code>import</code> keyword is used to import a default export from the module located at
+        the relative path <code>'./myModule.js'</code>. The exported value is assigned to the variable
+        <code>myModule</code>.
+    </p>
+    <p>You can also import named exports from a module using the <code>import</code> keyword with curly braces:</p>
+    <pre><code class="language-javascript">import &#123; myFunction, myVariable &#125; from './myModule.js'; 
+        </code></pre>
+    <p>In this example, the <code>import</code> keyword is used to import the named exports <code>myFunction</code> and
+        <code>myVariable</code> from the module located at the relative path <code>'./myModule.js'</code>. The exported
+        values are assigned to variables with the same names.
+    </p>
+    <p>You can also import all the named exports from a module as an object using the <code>*</code> as syntax:</p>
+    <pre><code class="language-javascript">import * as myModule from './myModule.js'; 
+        </code></pre>
+    <p>In this example, the <code>import</code> keyword is used to import all the named exports from the module located
+        at the relative path <code>'./myModule.js'</code>. The exported values are assigned to an object named
+        <code>myModule</code>, with the export names as object keys.
+    </p>
+    <p>It's important to note that <code>import</code> statements must appear at the top-level of a module and cannot be
+        conditionally executed or nested inside blocks. Additionally, when using <code>import</code> in a web browser,
+        the imported module must be served with the <code>Content-Type</code> header set to
+        <code>'text/javascript'</code>, otherwise the import may fail.
+    </p>
+</div>
+
+<div id="export">
+    <h4>Exporting</h4>
+    <p>The other side of the coin is exporting. In Javascript the export keyword is used to export values from a module
+        so that they can be imported and used in other modules.</p>
+    <p>There are several ways to export values from a module in JavaScript:</p>
+    <ol>
+        <li>Named Exports: Named exports allow you to export multiple values from a module by assigning them to a
+            variable, function, or class, and then exporting that value with the export keyword. Here's an example:</li>
+        <pre><code>// math.js
+        export const PI = 3.14;
+        export function add(a, b) {
+          return a + b;
+        }
+        export class Calculator {
+          multiply(a, b) {
+            return a * b;
+          }
+        }</code></pre>
+        <p>In this example, the export keyword is used to export a constant named PI, a function named add, and a class
+            named Calculator from the math.js module. These values can then be imported and used in other modules.</p>
+        <li>Default Exports: Default exports allow you to export a single value from a module as the default value. You
+            can use the export default syntax to export a single value, and then import that value without curly braces
+            in the importing module. Here's an example:</li>
+        <pre><code>// math.js
+        const PI = 3.14;
+        function add(a, b) {
+          return a + b;
+        }
+        export default { PI, add };</code></pre>
+        <p>In this example, the export default syntax is used to export an object with two properties, PI and add, from
+            the math.js module as the default export. This object can then be imported and used in other modules without
+            curly braces:</p>
+        <pre><code>// app.js
+        import math from './math.js';
+        console.log(math.PI); // Output: 3.14
+        console.log(math.add(2, 3)); // Output: 5</code></pre>
+        <p>In this example, the import statement imports the default export from the math.js module and assigns it to a
+            variable named math. The exported object with PI and add properties can then be accessed using the math
+            variable.</p>
+    </ol>
+    <p>Overall, the export keyword in JavaScript allows you to export values from a module so that they can be reused in
+        other modules, making it easier to write modular, reusable code.</p>
+
+</div>
+
+<div id="redirection">
+
+    <h4>Redirection</h4>
+
+    <p>Redirection is a technique used in web development to send a user from one URL to another URL.</p>
+    <p>We make use of two different types of redirection, one is serverside,
+        where the web server directs a user's browser from one URL to another URL using server-side scripts or
+        configurations,
+        without any action required from the user. The other is clientside, which is the process of redirecting a user
+        to a different web page or
+        website using client-side scripting languages such as JavaScript. It occurs within the user's web browser
+        without any involvement from the server.
+        When a user clicks on a link or performs a certain action on a web page, the JavaScript code runs and redirects
+        the user to the specified URL.
+    </p>
+
+</div>
+<div id="clientside">
+    <p>Client-side redirection in JavaScript can be achieved using the window.location object. This object contains
+        information about the current URL and allows you to change the URL of the current page, which in turn triggers a
+        client-side redirect.</p>
+    <p>Here's an example of how to perform client-side redirection in JavaScript:</p>
+    <pre><code class="language-javascript">window.location.href = 'http://www.example.com';</code></pre>
+    <p>In this example, the window.location.href property is set to the URL that you want to redirect to. This triggers
+        a client-side redirect to the specified URL.</p>
+    <p>You can also use other properties of the window.location object to modify the current URL before performing a
+        redirect. For example, you can change the hash or query string of the URL like this:</p>
+    <pre><code class="language-javascript">window.location.hash = '#section1';<br>window.location.search = '?query=example';</code></pre>
+    <p>These statements change the hash and query string of the current URL, respectively.</p>
+</div>
+
+<div id="serverside">
+    <p>In Node.js, server-side redirection can be performed using the <code>response.redirect()</code> method. This
+        method sends a redirect response to the client, causing the client to navigate to a different URL.</p>
+    <p>Here's an example of how to perform server-side redirection in Node.js:</p>
+    <pre><code class="language-javascript">const http = require('http');
+  const server = http.createServer((req, res) =&gt; {
+    if (req.url === '/redirect') {
+      res.writeHead(302, { 'Location': 'http://www.example.com' });
+      res.end();
+    } else {
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write('&lt;html&gt;&lt;body&gt;&lt;h1&gt;Hello World!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;');
+      res.end();
+    }
+  });
+  server.listen(3000, () => {
+  console.log('Server listening on port 3000');
+  });</code></pre>
+
+    <p>In the example, the server listens for incoming HTTP requests and checks if the request URL is
+        <code>/redirect</code>. If it is, the server sends a redirect response to the client with a 302 status code and
+        a <code>Location</code> header that specifies the URL to redirect to.
+    </p>
+    <p>Note that server-side redirection can be used to redirect to any URL, regardless of the domain. However, it is
+        important to ensure that the target URL is valid and trustworthy, as server-side redirection can be used for
+        phishing and other malicious purposes.</p>
+</div>
