@@ -257,7 +257,7 @@
         console.log(myArray1); // Output: [1, 2, 3, 4, 5]
     </pre>
     <p>
-        the .indexOf() method
+        The .indexOf() method
     </p>
     <p>
         .indexOf() is used to search an array for an element and return its index position.
@@ -269,7 +269,7 @@
         if this second parameter is omitted, the method will start searching at the beginning of the array.
     </p>
     <p>
-        the .splice() method
+        The .splice() method
     </p>
 
     <p>
@@ -291,7 +291,7 @@
         The .slice() method
     </p>
     <p>
-        the slice() method is used to create a new array from another array by copying over elements.
+        The slice() method is used to create a new array from another array by copying over elements.
         The method takes two parameters, the first is the index from where to start, and the second parameter is the
         index where to stop.
         The method then returns an array consisting of the elements on the chosen indexes of the first array.
@@ -348,7 +348,7 @@
         The .forEach() loop
     </p>
     <p>
-        this method executes a callback function for every element in the array.
+        This method executes a callback function for every element in the array.
         It doesn`t require any manual iteration control, as it stops executing the callback when there are no more
         elements in the array.
         The forEach loop is generally used when manipulating the DOM tree, as the method itself only executes the
@@ -369,10 +369,10 @@
     </p>
 
     <p>
-        the .map() method
+        The .map() method
     </p>
     <p>
-        this method returns a new array with the exact same length as the original array.
+        This method returns a new array with the exact same length as the original array.
         The method executes a callback function for each element and maps the value to the new array
     </p>
 
@@ -390,7 +390,7 @@
     </p>
 
     <p>
-        the .reduce() method
+        The .reduce() method
     </p>
     <p>
         .reduce() reduces an array to a single value by executing a callback function for each element of the array.
@@ -416,11 +416,11 @@
     </p>
 
     <p>
-        the .filter() method:
+        The .filter() method:
     </p>
 
     <p>
-        is used to filter out an array, creating a another shorter, or same length, array only including the elements
+        Is used to filter out an array, creating a another shorter, or same length, array only including the elements
         which pass some chosen criteria.
         The filter method takes a callback function as it`s argument, which is executed for each element of the array.
         The callback function should return a Boolean value,
@@ -445,11 +445,11 @@
         value higher than 5.
     </p>
     <p>
-        the .find() method
+        The .find() method
     </p>
 
     <p>
-        this method takes a callback function as an argument that is called for each element of the array,
+        This method takes a callback function as an argument that is called for each element of the array,
         and the first element for which the callback function returns a truthy value is returned by the .find() method.
         The method does not keep iterating after the first truthy value, which makes it very performance friendly.
     </p>
@@ -503,7 +503,7 @@
 
 <div id="modules">
     <h4>Modules</h4>
-    <p>In general, modules in JavaScript are self-contained units of code that can be reused in different parts of an
+    <p>Modules in JavaScript are self-contained units of code that can be reused in different parts of an
         application. They allow you to break up your code into separate files or modules, each with its own set of
         functions, classes, and variables.</p>
     <p>Modules can help make your code more organized, maintainable, and scalable by providing a clear separation of
@@ -513,8 +513,8 @@
         ECMAScript 6 (ES6) module system is the most widely used and is built into the language itself. It uses the
         import and export keywords to define and use modules.</p>
     <p>With the ES6 module system, you can export functions, variables, classes, and other values from a module using
-        the export keyword, and then import those values into another module using the import keyword. This allows you
-        to reuse code across different parts of your application, or even across different applications.</p>
+        the export keyword, and then import those values into another module using the import keyword. This allows developers
+        to reuse code across different parts of applications, or even across different applications.</p>
     <p>Here's an example of how to define and use a module in JavaScript:</p>
     <pre><code>
             export function add(a, b) {
@@ -524,7 +524,7 @@
             import { add } from './math.js';
             console.log(add(2, 3)); // Output: 5</code></pre>
 
-    <p>In this example, the export keyword is used to export a function named add from the math.js module. The import
+    <p>Here the export keyword is used to export a function named add from the math.js module. The import
         keyword is then used to import the add function into the app.js module, which is then used to calculate the sum
         of 2 and 3 and log the result to the console.</p>
     <p>Overall, modules in JavaScript are an important part of modern web development, and can help you write cleaner,
@@ -543,7 +543,7 @@
         the relative path <code>'./myModule.js'</code>. The exported value is assigned to the variable
         <code>myModule</code>.
     </p>
-    <p>You can also import named exports from a module using the <code>import</code> keyword with curly braces:</p>
+    <p>It's also possible to import named exports from a module using the <code>import</code> keyword with curly braces:</p>
     <pre><code class="language-javascript">import &#123; myFunction, myVariable &#125; from './myModule.js'; 
         </code></pre>
     <p>In this example, the <code>import</code> keyword is used to import the named exports <code>myFunction</code> and
